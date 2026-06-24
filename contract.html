@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Development Agreement</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+:root{
+  --primary-color:#000;
+  --accent:#e74279;
+}
+
+body{
+  margin:0;
+  font-family: 'Courier New', Courier, monospace;;
+  background:#f4f6f9;
+}
+
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background: pink;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  color:white;
+  z-index:1000;
+}
+
+.logo{
+  font-family:Brush Script MT;
+  font-size:1.6rem;
+  color:var(--accent);
+}
+
+.menu-toggle{
+  font-size:1.5rem;
+  cursor:pointer;
+}
+
+.menu-links{
+  display:none;
+  position:absolute;
+  top:60px;
+  right:20px;
+  background:#fffdfe;
+  border-radius:8px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  flex-direction:column;
+}
+
+.menu-links a{
+  padding:10px 15px;
+  text-decoration:none;
+  color:black;
+}
+
+
+.container{
+  max-width:900px;
+  margin:120px auto 40px auto;
+  background:white;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.menu-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.menu-links {
+  display: none;
+  flex-direction: column;
+  background: rgb(255, 119, 194);
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.menu-links a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+nav a:hover {
+      color: var(--gold);
+      transform: scale(1.1);
+    }
+
+.top-section{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.logo-box img{
+  max-width:220px;
+}
+
+.bank-details{
+  text-align:right;
+  font-size:14px;
+}
+
+h1{
+  text-align:center;
+  margin-top:10px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+table th, table td{
+  border:1px solid #ddd;
+  padding:10px;
+  font-size:14px;
+}
+
+table th{
+  background:black;
+  color:white;
+}
+
+.section{
+  margin-top:30px;
+}
+
+canvas{
+  border:2px solid black;
+  border-radius:6px;
+  width:100%;
+  height:180px;
+}
+
+input{
+  width:100%;
+  padding:8px;
+  margin:10px 0;
+}
+
+button{
+  padding:10px 18px;
+  background:black;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  background:#333;
+}
+
+.checkbox{
+  margin-top:15px;
+}
+
+@media(max-width:600px){
+  .top-section{
+    flex-direction:column;
+    gap:15px;
+  }
+  .bank-details{
+    text-align:left;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Mbalz_Creations</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="menu-links" class="menu-links">
+    <a href="contract.html">Sign Contract</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<div class="top-section">
+  
+  <div class="logo-box">
+    <img src="logo.png" alt="Your Logo Here">
+  </div>
+
+  <div class="bank-details">
+    <strong>Banking Details</strong><br>
+    Bank: Capitec<br>
+    Account Holder: Miss M Mahlangu<br>
+    Account No: 1799608326<br>
+    Branch Code: 470010<br>
+    Reference: Client Name
+  </div>
+
+</div>
+
+<h1>WEBSITE DEVELOPMENT & HOSTING AGREEMENT</h1>
+
+<p><strong>Company:</strong> Abstract Earth</p>
+<p><strong>Client Representative:</strong> Mpumelelo Mahlangu</p>
+<p><strong>Developer:</strong> Mbali Mahlangu</p>
+
+<h2>Project Summary</h2>
+
+<table>
+<tr><th>Item</th><th>Details</th></tr>
+
+<tr>
+<td>Project Requested</td>
+<td>5-Page E-Commerce Website </td>
+</tr>
+
+<tr>
+<td>Total Development Fee</td>
+<td>R1,700 (Amount broken down R1,500 for website + R200 for domain & hosting)</td>
+</tr>
+
+<tr>
+<td>Deposit Required (60%)</td>
+<td>R1,020 – Before Work Begins</td>
+</tr>
+
+<tr>
+<td>Final Payment (40%)</td>
+<td>R680 – Before Website Goes Live</td>
+</tr>
+
+<tr>
+<td>Domain Registration</td>
+<td>R100(Once Off)</td>
+</tr>
+
+<tr>
+<td>Monthly Hosting</td>
+<td>R 100 per month</td>
+</tr>
+
+<tr>
+<td>Timeline</td>
+<td>4-5 Weeks</td>
+</tr>
+</table>
+
+<div class="section">
+<h3>Hosting Responsibility</h3>
+<p>
+The Developer will host the website for the Client in the first month & pay for the hosting.
+From the following month, the Client will be responsible for paying the hosting fee of <strong>R100 per month</strong>.
+Failure to pay may result in website suspension.
+</p>
+</div>
+
+<div class="section">
+<h3>Client Confirmation</h3>
+
+<input type="text" id="clientName" placeholder="Client Full Name">
+<input type="date" id="date">
+
+<div class="checkbox">
+<input type="checkbox" id="agree">
+<label for="agree"> I confirm that I have read and agree to all terms stated above.</label>
+</div>
+
+<h4>Signature</h4>
+<canvas id="signature-pad"></canvas>
+
+<button onclick="clearSignature()">Clear</button>
+<button onclick="downloadPDF()">Download My Contract</button>
+
+</div>
+
+</div>
+
+<script>
+function toggleMenu(){
+  const menu=document.getElementById("menu-links");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+const canvas=document.getElementById('signature-pad');
+const signaturePad=new SignaturePad(canvas);
+
+function clearSignature(){
+  signaturePad.clear();
+}
+
+async function downloadPDF(){
+
+  const name=document.getElementById("clientName").value;
+  const date=document.getElementById("date").value;
+  const agree=document.getElementById("agree").checked;
+
+  if(!name || !date){
+    alert("Please complete all fields.");
+    return;
+  }
+
+  if(!agree){
+    alert("Please confirm agreement.");
+    return;
+  }
+
+  if(signaturePad.isEmpty()){
+    alert("Please sign the agreement.");
+    return;
+  }
+
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  doc.setFontSize(14);
+  doc.text("Website Development Agreement",20,20);
+  doc.setFontSize(11);
+  doc.text("Company: Ushintsho Lwesimo Holdings (Pty) Ltd",20,35);
+  doc.text("Subsidiary: Future Focus Learning Hub",20,42);
+  doc.text("Total Fee: R2,700",20,55);
+  doc.text("Deposit: R1,620 | Balance: R1,080",20,62);
+  doc.text("Client Name: "+name,20,75);
+  doc.text("Date: "+date,20,82);
+
+  const img=signaturePad.toDataURL("image/png");
+  doc.addImage(img,"PNG",20,95,60,30);
+
+  doc.save("Signed_Website_Agreement.pdf");
+
+  alert("Your signed contract has been downloaded successfully.");
+}
+
+/* Close menu when clicking outside */
+window.addEventListener('click', function(e) {
+  const menu = document.getElementById('menu-links');
+  const toggle = document.querySelector('.menu-toggle');
+  if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+    menu.style.display = 'none';
+  }
+});
+</script>
+
+
+</body>
+</html>
+
+
+
