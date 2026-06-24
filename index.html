@@ -41,29 +41,6 @@ header{
   color:var(--accent);
 }
 
-.menu-toggle{
-  font-size:1.5rem;
-  cursor:pointer;
-}
-
-.menu-links{
-  display:none;
-  position:absolute;
-  top:60px;
-  right:20px;
-  background:#fffdfe;
-  border-radius:8px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-  flex-direction:column;
-}
-
-.menu-links a{
-  padding:10px 15px;
-  text-decoration:none;
-  color:black;
-}
-
-
 .container{
   max-width:900px;
   margin:120px auto 40px auto;
@@ -72,47 +49,6 @@ header{
   border-radius:12px;
   box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
-
-.menu-toggle {
-  font-size: 1.8rem;
-  cursor: pointer;
-  background: black;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-.menu-links {
-  display: none;
-  flex-direction: column;
-  background: rgb(255, 119, 194);
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  width: 180px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-
-.menu-links a {
-  padding: 12px;
-  text-decoration: none;
-  color: black;
-  border-bottom: 1px solid #eee;
-}
-nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: all 0.3s ease-in-out;
-    }
-nav a:hover {
-      color: var(--gold);
-      transform: scale(1.1);
-    }
-
 .top-section{
   display:flex;
   justify-content:space-between;
@@ -202,9 +138,6 @@ button:hover{
 
 <header>
   <div class="logo">Mbalz_Creations</div>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <nav id="menu-links" class="menu-links">
-    <a href="contract.html">Sign Contract</a>
   </nav>
 </header>
 
